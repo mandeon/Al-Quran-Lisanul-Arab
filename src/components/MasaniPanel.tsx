@@ -26,6 +26,8 @@ import {
 import { formatNumber } from '../utils/abjad';
 import { renderHighlightedTranslation } from '../utils/highlightKeywords';
 import { MasaniReportCard } from './MasaniReportCard';
+import { MasaniDerivationTree } from './MasaniDerivationTree';
+import { getMasaniDerivation } from '../utils/masaniDerivation';
 
 interface MasaniPanelProps {
   allSurahs: SurahMeta[];
@@ -49,6 +51,7 @@ export const MasaniPanel: React.FC<MasaniPanelProps> = ({
 
   // Laporan Masani berbasis data, diawali ayat 1 surat terpilih
   const masaniReport = useMemo(() => getSurahMasaniReport(selectedTreeSurah), [selectedTreeSurah]);
+  const masaniDerivation = useMemo(() => getMasaniDerivation(selectedTreeSurah), [selectedTreeSurah]);
 
   // Filtered surahs for selector search
   const filteredSurahsForSelect = useMemo(() => {
@@ -404,6 +407,11 @@ export const MasaniPanel: React.FC<MasaniPanelProps> = ({
 
           {/* LAPORAN MASANI BERBASIS DATA: DIAWALI AYAT 1, DALAM SURAT & ANTAR SURAT */}
           {masaniReport && <MasaniReportCard report={masaniReport} onOpenSurah={onOpenSurah} />}
+
+          {/* RINCIAN AYAT TURUNAN PER LAPIS TSUNAI (1+1=2, 1+2=3, 1+3=4, 1+Banyak) */}
+          {masaniDerivation && (
+            <MasaniDerivationTree derivation={masaniDerivation} onOpenSurah={onOpenSurah} />
+          )}
         </div>
       )}
 
