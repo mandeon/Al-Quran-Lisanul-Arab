@@ -28,6 +28,8 @@ import { renderHighlightedTranslation } from '../utils/highlightKeywords';
 import { MasaniReportCard } from './MasaniReportCard';
 import { MasaniDerivationTree } from './MasaniDerivationTree';
 import { getMasaniDerivation } from '../utils/masaniDerivation';
+import { MasaniPairTableView } from './MasaniPairTableView';
+import { getAcrossSurahPairTable, getWithinSurahPairTable } from '../utils/masaniTables';
 
 interface MasaniPanelProps {
   allSurahs: SurahMeta[];
@@ -52,6 +54,17 @@ export const MasaniPanel: React.FC<MasaniPanelProps> = ({
   // Laporan Masani berbasis data, diawali ayat 1 surat terpilih
   const masaniReport = useMemo(() => getSurahMasaniReport(selectedTreeSurah), [selectedTreeSurah]);
   const masaniDerivation = useMemo(() => getMasaniDerivation(selectedTreeSurah), [selectedTreeSurah]);
+
+  // Tabel lengkap Masani (antar surat & dalam satu surat)
+  const [tableScope, setTableScope] = useState<'all' | 'surah'>('all');
+  const acrossTable = useMemo(
+    () => getAcrossSurahPairTable(tableScope === 'all' ? undefined : selectedTreeSurah),
+    [tableScope, selectedTreeSurah]
+  );
+  const withinTable = useMemo(
+    () => getWithinSurahPairTable(tableScope === 'all' ? undefined : selectedTreeSurah),
+    [tableScope, selectedTreeSurah]
+  );
 
   // Filtered surahs for selector search
   const filteredSurahsForSelect = useMemo(() => {
@@ -412,6 +425,63 @@ export const MasaniPanel: React.FC<MasaniPanelProps> = ({
           {masaniDerivation && (
             <MasaniDerivationTree derivation={masaniDerivation} onOpenSurah={onOpenSurah} />
           )}
+
+          {/* TABEL LENGKAP MASANI: ANTAR SURAT & DALAM SATU SURAT */}
+          <div className="space-y-4">
+            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 p-3 rounded-2xl bg-slate-100">
+              <span className="text-xs sm:text-sm font-black text-slate-800">
+                Tabel Lengkap Masani: Cakupan
+              </span>
+              <div className="flex items-center gap-1 bg-white p-1 rounded-xl">
+                <button
+                  type="button"
+                  onClick={() => setTableScope('all')}
+                  className={`px-3 py-1.5 rounded-lg text-xs font-black cursor-pointer ${
+                    tableScope === 'all' ? 'bg-indigo-600 text-white' : 'text-slate-600'
+                  }`}
+                >
+                  Seluruh Al-Qur'an (114 surat)
+                </button>
+                <button
+                  type="button"
+                  onClick={() => setTableScope('surah')}
+                  className={`px-3 py-1.5 rounded-lg text-xs font-black cursor-pointer ${
+                    tableScope === 'surah' ? 'bg-indigo-600 text-white' : 'text-slate-600'
+                  }`}
+                >
+                  QS. {allSurahs[selectedTreeSurah - 1]?.name}
+                </button>
+              </div>
+            </div>
+
+            <MasaniPairTableView
+              key={`across-${tableScope}-${selectedTreeSurah}`}
+              title="Tabel 1: Masani Antar Surat (Lengkap)"
+              subtitle={
+                tableScope === 'all'
+                  ? 'Semua pasangan dua ayat dari surat BERBEDA yang nilai hisabnya sama persis, di seluruh Al-Qur\'an.'
+                  : `Semua pasangan antara ayat QS. ${allSurahs[selectedTreeSurah - 1]?.name} dengan ayat di surat lain yang nilai hisabnya sama persis.`
+              }
+              table={acrossTable}
+              sameSurah={false}
+              tone="amber"
+              onOpenSurah={onOpenSurah}
+            />
+
+            <MasaniPairTableView
+              key={`within-${tableScope}-${selectedTreeSurah}`}
+              title="Tabel 2: Masani Dalam Satu Surat (Lengkap)"
+              subtitle={
+                tableScope === 'all'
+                  ? 'Semua pasangan dua ayat di dalam surat YANG SAMA yang nilai hisabnya sama persis, untuk seluruh 114 surat.'
+                  : `Semua pasangan dua ayat di dalam QS. ${allSurahs[selectedTreeSurah - 1]?.name} yang nilai hisabnya sama persis.`
+              }
+              table={withinTable}
+              sameSurah
+              tone="sky"
+              onOpenSurah={onOpenSurah}
+            />
+          </div>
         </div>
       )}
 
