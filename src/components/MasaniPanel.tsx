@@ -29,6 +29,7 @@ import { MasaniReportCard } from './MasaniReportCard';
 import { MasaniDerivationTree } from './MasaniDerivationTree';
 import { getMasaniDerivation } from '../utils/masaniDerivation';
 import { MasaniPairTableView } from './MasaniPairTableView';
+import { WordMasaniSearch } from './WordMasaniSearch';
 import { getAcrossSurahPairTable, getWithinSurahPairTable } from '../utils/masaniTables';
 
 interface MasaniPanelProps {
@@ -425,6 +426,9 @@ export const MasaniPanel: React.FC<MasaniPanelProps> = ({
           {masaniDerivation && (
             <MasaniDerivationTree derivation={masaniDerivation} onOpenSurah={onOpenSurah} />
           )}
+
+          {/* PENCARIAN MASANI KATA DI SELURUH AL-QUR'AN */}
+          <WordMasaniSearch onOpenSurah={onOpenSurah} />
 
           {/* TABEL LENGKAP MASANI: ANTAR SURAT & DALAM SATU SURAT */}
           <div className="space-y-4">
