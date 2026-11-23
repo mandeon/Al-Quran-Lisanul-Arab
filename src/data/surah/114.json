@@ -1,0 +1,179 @@
+{
+  "name": "An-Nas",
+  "name_translations": {
+    "ar": "الناس",
+    "en": "Mankind",
+    "id": "Manusia"
+  },
+  "number_of_ayah": 6,
+  "number_of_surah": 114,
+  "place": "Mecca",
+  "recitations": [
+    {
+      "name": "Mishari Rashid al-`Afasy",
+      "audio_url": "https://download.quranicaudio.com/quran/mishaari_raashid_al_3afaasee/114.mp3"
+    },
+    {
+      "name": "Abdur-Rahman as-Sudais",
+      "audio_url": "https://download.quranicaudio.com/quran/abdurrahmaan_as-sudays/114.mp3"
+    },
+    {
+      "name": "Saad al-Ghamdi",
+      "audio_url": "https://download.quranicaudio.com/quran/sa3d_al-ghaamidi/complete/114.mp3"
+    }
+  ],
+  "type": "Makkiyah",
+  "verses": [
+    {
+      "number": 1,
+      "text": "قل أعوذ برب الناس",
+      "text_with_harakat": "قُلْ أَعُوذُ بِرَبِّ ٱلنَّاسِ",
+      "translation_en": "Say, \"I seek refuge in the Lord of mankind,",
+      "translation_id": "Ucapkanlah: Aku berlindung (bernaung dan berpegang) kepada Rabb an-Nas — Pemilik dan Penguasa manusia.",
+      "translation_source": "Lisanul Arab - Ibnu Manzhur (Arabic-Dictionaries/OSINTAI)",
+      "highlight_keywords": [
+        "Rabb: Pemilik segala sesuatu",
+        "An-Nas: manusia"
+      ],
+      "highlight_details": [
+        {
+          "keyword": "Rabb: Pemilik segala sesuatu",
+          "root": "ر-ب-ب",
+          "arabic_text": "ربب: الرَّبُّ: هُوَ اللَّهُ عَزَّ وَجَلَّ، هُوَ رَبُّ كلِّ شيءٍ أَي مالكُه، وَلَهُ الرُّبوبيَّة عَلَى جَمِيعِ الخَلْق، لَا شَرِيكَ لَهُ، وَهُوَ رَبُّ الأَرْبابِ، ومالِكُ المُلوكِ والأَمْلاكِ. وَلَا يُقَالُ الربُّ فِي غَيرِ اللهِ، إِلّا بالإِضافةِ",
+          "explanation": "Lisan (Jilid 1, entri ربب): Ar-Rabb adalah Allah, Rabb segala sesuatu yakni PEMILIKNYA (maalikuhu); bagi-Nya rububiyyah atas seluruh makhluk tanpa sekutu; Rabb para rabb dan Pemilik para raja. Kata 'ar-Rabb' tidak dipakai untuk selain Allah kecuali dengan idhafah (disandarkan, mis. rabbu ad-dar)."
+        },
+        {
+          "keyword": "An-Nas: manusia",
+          "root": "ن-و-س / أ-ن-س",
+          "arabic_text": "نوس: الناسُ: قَدْ يَكُونُ مِنَ الإِنس وَمِنِ الجِنِّ، وأَصله أَناس فَخُفِّفَ",
+          "explanation": "Lisan (Jilid 6, entri نوس): an-nas bisa mencakup manusia (al-ins) dan juga jin; asal katanya 'unas' lalu diringankan (bukti: penyair masih berkata 'al-unas al-aminina'). Dalam entri yang sama an-naws berarti bergerak-gerak berayun (tadzabdzub)."
+        }
+      ]
+    },
+    {
+      "number": 2,
+      "text": "ملك الناس",
+      "text_with_harakat": "مَلِكِ ٱلنَّاسِ",
+      "translation_en": "The Sovereign of mankind.",
+      "translation_id": "Malik an-Nas — Raja dan Penguasa manusia, yang memiliki kekuasaan penuh atas mereka.",
+      "translation_source": "Lisanul Arab - Ibnu Manzhur (Arabic-Dictionaries/OSINTAI)",
+      "highlight_keywords": [
+        "Malik: Raja pemilik kekuasaan"
+      ],
+      "highlight_details": [
+        {
+          "keyword": "Malik: Raja pemilik kekuasaan",
+          "root": "م-ل-ك",
+          "arabic_text": "ملك: اللَّيْثُ: المَلِكُ هُوَ الله، تعالى وتقدّس، مَلِكُ المُلُوك لَهُ المُلْكُ وَهُوَ مَالِكُ يَوْمِ الدِّينِ وَهُوَ مَلِيكُ الْخَلْقِ أَيْ رَبُّهُمْ وَمَالِكُهُمْ... وَأَمَّا مَلِكُ النَّاسِ وَسَيِّدُ النَّاسِ وَرَبُّ النَّاسِ فَإِنَّهُ أَراد أَفضل مِنْ هَؤُلَاءِ",
+          "explanation": "Lisan (Jilid 10, entri ملك): Al-Malik adalah Allah, Raja segala raja; Dia Malik Yaum ad-Din dan Malik al-khalq yakni Rabb dan Pemilik mereka. Ibnu Manzhur mengutip Abul 'Abbas secara khusus tentang 'Malik an-Nas, Sayyid an-Nas, Rabb an-Nas': maksudnya lebih tinggi dari sekadar memiliki mereka. Ibnu Sidah: al-mulk = ihtiwa' asy-syai' wal-qudrah 'alal-istibdad bihi (menguasai sesuatu dan berkuasa penuh atasnya)."
+        }
+      ]
+    },
+    {
+      "number": 3,
+      "text": "إله الناس",
+      "text_with_harakat": "إِلَٰهِ ٱلنَّاسِ",
+      "translation_en": "The God of mankind,",
+      "translation_id": "Ilah an-Nas — Sesembahan manusia, satu-satunya yang berhak diibadahi dengan ketaatan penuh ketundukan.",
+      "translation_source": "Lisanul Arab - Ibnu Manzhur (Arabic-Dictionaries/OSINTAI)",
+      "highlight_keywords": [
+        "Ilah: yang disembah"
+      ],
+      "highlight_details": [
+        {
+          "keyword": "Ilah: yang disembah",
+          "root": "أ-ل-ه",
+          "arabic_text": "أله: الإِلَهُ: اللَّهُ عَزَّ وَجَلَّ، وَكُلُّ مَا اتُّخِذَ مِنْ دُونِهِ مَعْبُودًا إلَهٌ عِنْدَ مُتَّخِذِهِ، وَالْجَمْعُ آلِهَةٌ. والآلِهَةُ: الأَصنام، سُمُّوا بِذَلِكَ لِاعْتِقَادِهِمْ أَن الْعِبَادَةَ تَحُقُّ لَهَا",
+          "explanation": "Lisan (Jilid 13, entri أله): Al-Ilah adalah Allah; segala yang dijadikan sesembahan selain-Nya disebut 'ilah' hanya menurut anggapan penyembahnya — jamaknya alihah, yaitu berhala, dinamai demikian karena keyakinan mereka bahwa ibadah layak bagi berhala itu. Abul Haitsam: lafaz 'Allah' asalnya 'al-Ilah', hamzahnya digugurkan lalu dua lam diidgamkan menjadi 'Allah'. Dari akar yang sama: aliha ya'lahu = tercengang/terpana oleh keagungan."
+        }
+      ]
+    },
+    {
+      "number": 4,
+      "text": "من شر الوسواس الخناس",
+      "text_with_harakat": "مِن شَرِّ ٱلْوَسْوَاسِ ٱلْخَنَّاسِ",
+      "translation_en": "From the evil of the retreating whisperer -",
+      "translation_id": "dari keburukan al-waswas — pembisik dengan suara samar — al-khannas, yang mengerut mundur dan bersembunyi (ketika Allah diingat).",
+      "translation_source": "Lisanul Arab - Ibnu Manzhur (Arabic-Dictionaries/OSINTAI)",
+      "highlight_keywords": [
+        "Al-Waswas: bisikan yang samar",
+        "Al-Khannas: yang mundur bersembunyi"
+      ],
+      "highlight_details": [
+        {
+          "keyword": "Al-Waswas: bisikan yang samar",
+          "root": "و-س-و-س",
+          "arabic_text": "وسس: الوَسْوَسَة والوَسْواس: الصَّوْتُ الْخَفِيُّ مِنْ رِيحٍ. والوَسْواس: صَوْتُ الحَلْي... والوَسْوَسَة والوِسْوَاس: حَدِيثُ النَّفْسِ... والوَسْواس، بِالْفَتْحِ: هُوَ الشَّيْطَانُ... مِنْ شَرِّ الْوَسْواسِ الْخَنَّاسِ؛ أَراد ذِي الوَسْواس وَهُوَ الشَّيْطَانُ الَّذِي يُوَسوس فِي صُدُورِ النَّاسِ",
+          "explanation": "Lisan (Jilid 6, entri وسس): al-waswasah adalah suara yang samar dari angin, dan gemerincing perhiasan; juga 'hadits an-nafs' (bisikan hati). Al-waswas (dengan fathah) adalah setan. Tentang ayat ini: yang dimaksud 'dzil-waswas', yaitu setan yang berbisik di dada manusia; dalam tafsir disebut ia mendekam di atas hati — bila hamba berzikir ia mengerut mundur, bila lalai ia kembali berbisik."
+        },
+        {
+          "keyword": "Al-Khannas: yang mundur bersembunyi",
+          "root": "خ-ن-س",
+          "arabic_text": "خنس: الخُنُوس: الانقباضُ وَالِاسْتِخْفَاءُ. خَنَسَ مِنْ بَيْنِ أَصحابه... انْقَبَضَ وتأَخر، وَقِيلَ: رَجَعَ... الشَّيْطَانُ يُوَسْوِسُ إِلى الْعَبْدِ فإِذا ذكَرَ اللَّه خَنَسَ؛ أَي انْقَبَضَ مِنْهُ وتأَخر",
+          "explanation": "Lisan (Jilid 6, entri خنس): al-khunus = mengerut (inqibadh) dan menyembunyikan diri (istikhfa'); khanasa = mengerut lalu mundur ke belakang, atau kembali. Hadis yang dinukil: 'Setan berbisik kepada hamba; bila ia mengingat Allah, setan itu khanasa' yakni mengerut dan mundur. Al-Azhari dan Al-Farra' menafsirkan al-khannas dalam ayat ini dengan makna itu."
+        }
+      ]
+    },
+    {
+      "number": 5,
+      "text": "الذى يوسوس فى صدور الناس",
+      "text_with_harakat": "ٱلَّذِى يُوَسْوِسُ فِى صُدُورِ ٱلنَّاسِ",
+      "translation_en": "Who whispers [evil] into the breasts of mankind -",
+      "translation_id": "yang membisikkan (perkataan samar yang tak jelas) ke dalam shudur — dada, bagian terdepan dan teratas diri — manusia.",
+      "translation_source": "Lisanul Arab - Ibnu Manzhur (Arabic-Dictionaries/OSINTAI)",
+      "highlight_keywords": [
+        "Yuwaswisu: berbisik tak jelas",
+        "Shudur: dada, bagian terdepan"
+      ],
+      "highlight_details": [
+        {
+          "keyword": "Yuwaswisu: berbisik tak jelas",
+          "root": "و-س-و-س",
+          "arabic_text": "ووَسْوس الرجلَ: كلَّمه كَلَامًا خَفِيًّا. ووَسْوس إِذا تَكَلَّمَ بِكَلَامٍ لم يبينه... قَالَ أَبو تُرَابٍ: سَمِعْتُ خَلِيفَةَ يَقُولُ الوَسْوَسَة الْكَلَامُ الْخَفِيُّ فِي اخْتِلَاطٍ",
+          "explanation": "Lisan (Jilid 6, entri وسس): waswasa ar-rajula = berbicara kepadanya dengan perkataan tersembunyi; waswasa = berbicara dengan ucapan yang tidak ia jelaskan. Abu Turab: al-waswasah adalah ucapan tersembunyi yang bercampur-aduk. Maka bisikan itu samar, kacau, dan tidak terang."
+        },
+        {
+          "keyword": "Shudur: dada, bagian terdepan",
+          "root": "ص-د-ر",
+          "arabic_text": "صدر: الصَّدْر: أَعلى مقدَّم كُلِّ شَيْءٍ وأَوَّله، حَتَّى إِنهم لَيَقُولُونَ: صَدْر النَّهَارِ وَاللَّيْلِ، وصَدْر الشِّتَاءِ وَالصَّيْفِ",
+          "explanation": "Lisan (Jilid 4, entri صدر): ash-shadr adalah bagian TERATAS dan TERDEPAN dari segala sesuatu serta permulaannya — sampai orang Arab berkata 'shadr an-nahar' (awal siang) dan 'shadr asy-syita'' (awal musim dingin). Shudur (jamak) dalam ayat ini adalah dada manusia, pusat dan bagian terdepan dirinya, tempat bisikan itu ditujukan."
+        }
+      ]
+    },
+    {
+      "number": 6,
+      "text": "من الجنة والناس",
+      "text_with_harakat": "مِنَ ٱلْجِنَّةِ وَٱلنَّاسِ",
+      "translation_en": "From among the jinn and mankind.\"",
+      "translation_id": "(yaitu pembisik itu) dari golongan al-jinnah — makhluk yang tersembunyi dari pandangan — dan (dari keburukan) manusia.",
+      "translation_source": "Lisanul Arab - Ibnu Manzhur (Arabic-Dictionaries/OSINTAI)",
+      "highlight_keywords": [
+        "Al-Jinnah: yang tersembunyi"
+      ],
+      "highlight_details": [
+        {
+          "keyword": "Al-Jinnah: yang tersembunyi",
+          "root": "ج-ن-ن",
+          "arabic_text": "جنن: جَنَّ الشيءَ يَجُنُّه جَنّاً: سَتَره. وكلُّ شَيْءٍ سُتر عَنْكَ فَقَدْ جُنَّ عَنْكَ... ابْنُ سِيدَهْ: الجِنُّ نوعٌ مِنَ العالَم سمُّوا بِذَلِكَ لاجْتِنانِهم عَنِ الأَبصار... وَهُمُ الجِنَّة... قَالَ الزَّجَّاجُ: ... مِنَ الْجِنَّةِ، الَّذِي هُوَ مِنِ الجِن، وَالنَّاسِ مَعْطُوفٌ عَلَى الوَسْوَاس، الْمَعْنَى مِنْ شَرِّ الْوَسْوَاسِ وَمِنْ شَرِّ النَّاسِ",
+          "explanation": "Lisan (Jilid 13, entri جنن): janna asy-syai'a = menutupinya; segala yang tertutup darimu disebut junna 'anka. Ibnu Sidah: jin adalah satu jenis alam, dinamai demikian karena mereka TERSEMBUNYI dari pandangan; mereka itulah al-jinnah. Az-Zajjaj menafsirkan ayat ini secara khusus: 'minal-jinnah' menerangkan al-waswas yang berasal dari jin, sedangkan 'wan-nas' di-'athaf-kan pada al-waswas — maknanya: dari keburukan pembisik (jin) DAN dari keburukan manusia."
+        }
+      ]
+    }
+  ],
+  "tafsir": {
+    "id": {
+      "kemenag": {
+        "name": "Kemenag",
+        "source": "Aplikasi Quran Kementrian Agama Republik Indonesia",
+        "text": {
+          "1": "Dalam ayat ini, Allah memerintahkan Nabi Muhammad termasuk pula di dalamnya seluruh umatnya agar memohon perlindungan kepada Tuhan yang menciptakan, menjaga, menumbuhkan, mengembangkan, dan menjaga kelangsungan hidup manusia dengan nikmat dan kasih sayang-Nya serta memberi peringatan kepada mereka dengan ancaman-ancaman-Nya.",
+          "2": "Allah menjelaskan bahwa Tuhan yang mendidik manusia itu adalah yang memiliki dan yang mengatur semua syariat, yang membuat undang-undang, peraturan-peraturan, dan hukum-hukum agama. Barang siapa yang mematuhinya akan berbahagia hidup di dunia dan di akhirat.",
+          "3": "Allah menambah keterangan tentang Tuhan pendidik manusia ialah yang menguasai jiwa mereka dengan kebesaran-Nya. Mereka tidak mengetahui kekuasaan Allah itu secara keseluruhan, tetapi mereka tunduk kepada-Nya dengan sepenuh hati dan mereka tidak mengetahui bagaimana datangnya dorongan hati kepada mereka itu, sehingga dapat mempengaruhi seluruh jiwa raga mereka.\n\nAyat-ayat ini mendahulukan kata Rabb (pendidik) dari kata Malik dan Ilah karena pendidikan adalah nikmat Allah yang paling utama dan terbesar bagi manusia. Kemudian yang kedua diikuti dengan kata Malik (Raja) karena manusia harus tunduk kepada kerajaan Allah sesudah mereka dewasa dan berakal. Kemudian diikuti dengan kata Ilah (sembahan), karena manusia sesudah berakal menyadari bahwa hanya kepada Allah mereka harus tunduk dan hanya Dia saja yang berhak untuk disembah.\n\nAllah menyatakan dalam ayat-ayat ini bahwa Dia Raja manusia. Pemilik manusia dan Tuhan manusia, bahkan Dia adalah Tuhan segala sesuatu. Tetapi di lain pihak, manusialah yang membuat kesalahan dan kekeliruan dalam menyifati Allah sehingga mereka tersesat dari jalan lurus. Mereka menjadikan tuhan-tuhan lain yang mereka sembah dengan anggapan bahwa tuhan-tuhan itulah yang memberi nikmat dan bahagia serta menolak bahaya dari mereka, yang mengatur hidup mereka, menggariskan batas-batas yang boleh atau tidak boleh mereka lakukan. Mereka memberi nama tuhan-tuhan itu dengan pembantu-pembantunya dan menyangka bahwa tuhan-tuhan itulah yang mengatur segala gerak-gerik mereka. Dalam ayat lain, Allah berfirman:\n\nMereka menjadikan orang-orang alim (Yahudi), dan rahib-rahibnya (Nasrani) sebagai tuhan selain Allah, dan (juga) Al-Masih putra Maryam; padahal mereka hanya disuruh menyembah Tuhan Yang Maha Esa; tidak ada tuhan selain Dia. Mahasuci Dia dari apa yang mereka persekutukan. (at-Taubah/9: 31)\n\nDan tidak (mungkin pula baginya) menyuruh kamu menjadikan para malaikat dan para nabi sebagai Tuhan. Apakah (patut) dia menyuruh kamu menjadi kafir setelah kamu menjadi Muslim? (Ali 'Imran/3: 80)\n\nMaksudnya, dengan ini Allah memperingatkan manusia bahwa Dia-lah yang mendidik mereka sedang mereka adalah manusia-manusia yang suka berpikir dan Dia Raja mereka dan Dia pula Tuhan mereka menurut pikiran mereka. Maka tidak benarlah apa yang mereka ada-adakan untuk mendewa-dewakan diri mereka padahal mereka manusia biasa.",
+          "4": "Dalam ayat ini, Allah memerintahkan manusia agar berlindung kepada Allah Rabbul-'Alamin dari kejahatan bisikan setan yang senantiasa bersembunyi di dalam hati manusia. Bisikan dan was-was yang berasal dari godaan setan itu bila dihadapkan kepada akal yang sehat mesti kalah dan orang yang tergoda menjadi sadar kembali, karena semua bisikan dan was-was setan yang akan menyakiti manusia itu akan menjadi hampa bila jiwa sadar kembali kepada perintah-perintah agama. Begitu pula bila seorang menggoda temannya yang lain untuk melakukan suatu kejahatan, tetapi temannya itu berpegang kuat dengan perintah-perintah agama niscaya akan berhenti menggoda dan merasa kecewa karena godaannya itu tidak berhasil namun ia tetap menunggu kesempatan yang lain.",
+          "5": "Allah menerangkan dalam ayat ini tentang godaan tersebut, yaitu bisikan setan yang tersembunyi yang ditiupkan ke dalam dada manusia, yang mungkin datangnya dari jin atau manusia, sebagaimana dalam ayat lain Allah berfirman:\n\nDan demikianlah untuk setiap nabi Kami menjadikan musuh yang terdiri dari setan-setan manusia dan jin. (al-An'am/6: 112)\n\nSetan-setan jin itu seringkali membisikkan suatu keraguan dengan cara yang sangat halus kepada manusia. Seringkali dia menampakkan dirinya sebagai penasihat yang ikhlas, tetapi bila engkau menghardiknya ia mundur dan bila diperhatikan bicaranya ia terus melanjutkan godaannya secara berlebih-lebihan. \n\nSurah ini dimulai dengan kata pendidik, karena itu Tuhan sebagai pendidik manusia, berkuasa untuk menolak semua godaan setan dan bisikannya dari manusia. Allah memberi petunjuk dalam surah ini agar manusia memohon pertolongan hanya kepada Allah sebagaimana Dia telah memberi petunjuk yang serupa dalam surah al-Fatihah, bahwa dasar yang terpenting dalam agama adalah menghadapkan diri dengan penuh keikhlasan kepada Allah baik dalam ucapan, maupun perbuatan lainnya dan memohon perlindungan kepada-Nya dari segala godaan setan yang ia sendiri tidak mampu menolaknya.",
+          "6": "Allah menerangkan dalam ayat ini tentang godaan tersebut, yaitu bisikan setan yang tersembunyi yang ditiupkan ke dalam dada manusia, yang mungkin datangnya dari jin atau manusia, sebagaimana dalam ayat lain Allah berfirman:\n\nDan demikianlah untuk setiap nabi Kami menjadikan musuh yang terdiri dari setan-setan manusia dan jin. (al-An'am/6: 112)\n\nSetan-setan jin itu seringkali membisikkan suatu keraguan dengan cara yang sangat halus kepada manusia. Seringkali dia menampakkan dirinya sebagai penasihat yang ikhlas, tetapi bila engkau menghardiknya ia mundur dan bila diperhatikan bicaranya ia terus melanjutkan godaannya secara berlebih-lebihan. \n\nSurah ini dimulai dengan kata pendidik, karena itu Tuhan sebagai pendidik manusia, berkuasa untuk menolak semua godaan setan dan bisikannya dari manusia. Allah memberi petunjuk dalam surah ini agar manusia memohon pertolongan hanya kepada Allah sebagaimana Dia telah memberi petunjuk yang serupa dalam surah al-Fatihah, bahwa dasar yang terpenting dalam agama adalah menghadapkan diri dengan penuh keikhlasan kepada Allah baik dalam ucapan, maupun perbuatan lainnya dan memohon perlindungan kepada-Nya dari segala godaan setan yang ia sendiri tidak mampu menolaknya."
+        }
+      }
+    }
+  }
+}

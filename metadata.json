@@ -1,0 +1,6 @@
+{
+  "name": "Alquran Counter",
+  "description": "Platform Al-Qur'an digital terang elegan dengan navigasi 114 surat, pencarian ayat, mode fokus tadabbur per ayat ber-highlight kata kunci, serta counter bacaan dan tasbih digital.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

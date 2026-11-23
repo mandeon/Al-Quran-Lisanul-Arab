@@ -1,0 +1,125 @@
+{
+  "name": "Al-Ikhlas",
+  "name_translations": {
+    "ar": "الإخلاص",
+    "en": "Sincerity",
+    "id": "Ikhlas"
+  },
+  "number_of_ayah": 4,
+  "number_of_surah": 112,
+  "place": "Mecca",
+  "recitations": [
+    {
+      "name": "Mishari Rashid al-`Afasy",
+      "audio_url": "https://download.quranicaudio.com/quran/mishaari_raashid_al_3afaasee/112.mp3"
+    },
+    {
+      "name": "Abdur-Rahman as-Sudais",
+      "audio_url": "https://download.quranicaudio.com/quran/abdurrahmaan_as-sudays/112.mp3"
+    },
+    {
+      "name": "Saad al-Ghamdi",
+      "audio_url": "https://download.quranicaudio.com/quran/sa3d_al-ghaamidi/complete/112.mp3"
+    }
+  ],
+  "type": "Makkiyah",
+  "verses": [
+    {
+      "number": 1,
+      "text": "قل هو الله أحد",
+      "text_with_harakat": "قُلْ هُوَ ٱللَّهُ أَحَدٌ",
+      "translation_en": "Say, \"He is Allah, [who is] One,",
+      "translation_id": "Ucapkanlah: Dia-lah Allah, Al-Ahad — Yang Tunggal, yang senantiasa sendiri dan tiada sesuatu pun yang lain bersama-Nya.",
+      "translation_source": "Lisanul Arab - Ibnu Manzhur (Arabic-Dictionaries/OSINTAI)",
+      "highlight_keywords": [
+        "Al-Ahad: Yang Tunggal tanpa bilangan",
+        "Qul: ucapan yang tersusun"
+      ],
+      "highlight_details": [
+        {
+          "keyword": "Al-Ahad: Yang Tunggal tanpa bilangan",
+          "root": "أ-ح-د / و-ح-د",
+          "arabic_text": "أحد: فِي أَسماءِ اللَّهِ تَعَالَى: الأَحد وَهُوَ الْفَرْدُ الَّذِي لَمْ يَزَلْ وَحْدَهُ وَلَمْ يَكُنْ مَعَهُ آخَرُ، وَهُوَ اسْمٌ بُنِيَ لِنَفْيِ مَا يُذْكَرُ مَعَهُ مِنَ الْعَدَدِ... وأَصله وَحَدٌ لأَنه مِنَ الوَحْدة",
+          "explanation": "Lisan (Jilid 3, entri أحد): Al-Ahad adalah Al-Fard yang sejak azali sendiri dan tidak ada yang lain bersama-Nya; nama ini dibentuk untuk MENIADAKAN bilangan apa pun di samping-Nya. Asalnya wahad (dari al-wahdah). Al-Azhari (entri وحد): 'Ahad' tidak boleh dijadikan sifat bagi selain Allah karena nama mulia ini khusus milik-Nya."
+        },
+        {
+          "keyword": "Qul: ucapan yang tersusun",
+          "root": "ق-و-ل",
+          "arabic_text": "القَوْل: الْكَلَامُ عَلَى التَّرْتِيبِ، وَهُوَ عِنْدَ المحقِّق كُلُّ لَفْظٍ قَالَ بِهِ اللِّسَانُ",
+          "explanation": "Lisan (Jilid 11, entri قول): Al-Qaul adalah kalam yang tersusun rapi, yaitu setiap lafaz yang diucapkan lisan. Maka 'Qul' adalah perintah untuk menyatakan dengan lisan secara terang. Al-Azhari menukil sebab turunnya: kaum musyrik berkata 'nasabkan Tuhanmu kepada kami', maka turunlah ayat ini — maknanya penafian nasab dari Allah."
+        }
+      ]
+    },
+    {
+      "number": 2,
+      "text": "الله الصمد",
+      "text_with_harakat": "ٱللَّهُ ٱلصَّمَدُ",
+      "translation_en": "Allah, the Eternal Refuge.",
+      "translation_id": "Allah adalah Ash-Shamad — Tuan yang dituju (dimaksud) dalam segala hajat, yang tiada satu urusan pun diputuskan tanpa-Nya, dan yang kekal setelah musnahnya makhluk.",
+      "translation_source": "Lisanul Arab - Ibnu Manzhur (Arabic-Dictionaries/OSINTAI)",
+      "highlight_keywords": [
+        "Ash-Shamad: Tuan yang dituju"
+      ],
+      "highlight_details": [
+        {
+          "keyword": "Ash-Shamad: Tuan yang dituju",
+          "root": "ص-م-د",
+          "arabic_text": "صَمَدَه يَصْمِدُه صَمْداً: قَصَدَه... والصَّمَد: السَّيِّدُ المُطاع الَّذِي لَا يُقْضى دُونَهُ أَمر، وَقِيلَ: الَّذِي يُصْمَدُ إِليه فِي الْحَوَائِجِ أَي يُقْصَدُ... وَقِيلَ: الصَّمَدُ الدائم الْبَاقِي بَعْدَ فَنَاءِ خَلقه",
+          "explanation": "Lisan (Jilid 3, entri صمد): makna dasar shamada = menuju/bermaksud (qashada). Ash-Shamad: Tuan yang ditaati yang tak satu perkara pun diputuskan tanpa-Nya; yang dituju dalam segala kebutuhan; Yang Kekal setelah binasanya makhluk; 'yang kepada-Nya segala sesuatu menuju, tiada sesuatu pun yang tidak butuh kepada-Nya'. Ibnu Manzhur menolak makna 'padat tak berongga' bila dinisbatkan kepada Allah: 'hadza la yajuzu 'ala Allah'."
+        }
+      ]
+    },
+    {
+      "number": 3,
+      "text": "لم يلد ولم يولد",
+      "text_with_harakat": "لَمْ يَلِدْ وَلَمْ يُولَدْ",
+      "translation_en": "He neither begets nor is born,",
+      "translation_id": "Dia tidak melahirkan anak yang dinasabkan kepada-Nya, dan tidak pula dilahirkan sehingga Dia bernasab kepada sesuatu.",
+      "translation_source": "Lisanul Arab - Ibnu Manzhur (Arabic-Dictionaries/OSINTAI)",
+      "highlight_keywords": [
+        "Lam yalid wa lam yulad: penafian nasab"
+      ],
+      "highlight_details": [
+        {
+          "keyword": "Lam yalid wa lam yulad: penafian nasab",
+          "root": "و-ل-د",
+          "arabic_text": "وَلَكِنَّ مَعْنَاهُ نَفْيُ النَّسَبِ عَنِ اللهِ تَعَالَى الواحدِ، لأَن الأَنْسابَ إِنما تَكُونُ لِلْمَخْلُوقِينَ، وَاللَّهُ تَعَالَى صِفَتُهُ أَنه لَمْ يَلِدْ وَلَدًا يُنْسَبُ إِليه، وَلَمْ يُولَدْ فَيَنْتَسِبُ إِلى ولد",
+          "explanation": "Lisan (Jilid 3, entri وحد, nukilan Al-Azhari): maknanya adalah meniadakan nasab dari Allah Yang Esa, sebab nasab hanya ada pada makhluk. Sifat-Nya: Dia tidak melahirkan anak yang dinasabkan kepada-Nya, dan tidak dilahirkan sehingga Ia bernasab kepada orang tua. Entri ولد: al-walid adalah bayi ketika ia dilahirkan."
+        }
+      ]
+    },
+    {
+      "number": 4,
+      "text": "ولم يكن له كفوا أحد",
+      "text_with_harakat": "وَلَمْ يَكُن لَّهُۥ كُفُوًا أَحَدٌۢ",
+      "translation_en": "Nor is there to Him any equivalent.\"",
+      "translation_id": "Dan tidak ada satu pun yang menjadi kufu' (tandingan, padanan yang setara) bagi-Nya.",
+      "translation_source": "Lisanul Arab - Ibnu Manzhur (Arabic-Dictionaries/OSINTAI)",
+      "highlight_keywords": [
+        "Kufuwan: tandingan yang setara"
+      ],
+      "highlight_details": [
+        {
+          "keyword": "Kufuwan: tandingan yang setara",
+          "root": "ك-ف-أ",
+          "arabic_text": "والكُفْءُ: النَّظِيرُ والمُساوِي... وتَكافَأَ الشَّيْئانِ: تَماثَلا... وَقَالَ الزَّجَّاجُ فِي قَوْلِهِ تَعَالَى: وَلَمْ يَكُنْ لَهُ كُفُواً أَحَدٌ... وَمَعْنَاهُ: لَمْ يَكُنْ أَحَدٌ مِثْلًا لِلَّهِ، تَعَالَى ذِكْرُه",
+          "explanation": "Lisan (Jilid 1, entri كفأ): al-kuf'u = an-nazhir wal-musawi (padanan dan yang sama tingkatnya); takafa'a asy-syai'an = keduanya serupa. Az-Zajjaj menafsirkan ayat ini: 'tidak ada seorang pun yang menjadi mitsl (semisal) bagi Allah'. Dicatat pula qira'at kufuwan, kuf'an, dan kif'an."
+        }
+      ]
+    }
+  ],
+  "tafsir": {
+    "id": {
+      "kemenag": {
+        "name": "Kemenag",
+        "source": "Aplikasi Quran Kementrian Agama Republik Indonesia",
+        "text": {
+          "1": "Pada ayat ini, Allah menyuruh Nabi Muhammad menjawab pertanyaan orang-orang yang menanyakan tentang sifat Tuhannya, bahwa Dia adalah Allah Yang Maha Esa, tidak tersusun dan tidak berbilang, karena berbilang dalam susunan zat berarti bahwa bagian kumpulan itu memerlukan bagian yang lain, sedang Allah sama sekali tidak memerlukan suatu apa pun. Keesaan Allah itu meliputi tiga hal: Dia Maha Esa pada Zat-Nya, Maha Esa pada sifat-Nya dan Maha Esa pada perbuatan-Nya.\n\nMaha Esa pada zat-Nya berarti zat-Nya tidak tersusun dari beberapa zat atau bagian. Maha Esa pada sifat-Nya berarti tidak ada satu sifat makhluk pun yang menyamai-Nya dan Maha Esa pada perbuatan-Nya berarti Dialah yang membuat semua perbuatan sesuai dengan firman-Nya:\n\nSesungguhnya urusan-Nya apabila Dia menghendaki sesuatu Dia hanya berkata kepadanya, \"Jadilah!\" Maka jadilah sesuatu itu. (Yasin/36 : 82)",
+          "2": "Allah menambahkan dalam ayat ini penjelasan tentang sifat Tuhan Yang Maha Esa itu, yaitu Dia adalah Tuhan tempat meminta dan memohon.",
+          "3": "Allah lalu menegaskan bahwa Mahasuci Ia dari mempunyai anak. Ayat ini juga menentang dakwaan orang-orang musyrik Arab yang mengatakan bahwa malaikat-malaikat adalah anak perempuan Allah dan dakwaan orang Nasrani bahwa Isa anak laki-laki Allah. Dalam ayat lain, Allah berfirman:\n\nMaka tanyakanlah (Muhammad) kepada mereka (orang-orang kafir Mekah), \"Apakah anak-anak perempuan itu untuk Tuhanmu sedangkan untuk mereka anak-anak laki-laki?\" Atau apakah Kami menciptakan malaikat-malaikat berupa perempuan sedangkan mereka menyaksikan(nya)? Ingatlah, sesungguhnya di antara kebohongannya mereka benar-benar mengatakan, \"Allah mempunyai anak.\" Dan sungguh, mereka benar-benar pendusta. (as-saffat/37: 149-152)\n\nAllah tidak beranak, dan tidak pula diperanakkan. Dengan demikian, Dia tidak sama dengan makhluk. Dia berada tidak didahului oleh tidak ada. Mahasuci Allah dari apa yang mereka sebutkan.\n\nIbnu 'Abbas berkata, \"Dia tidak beranak sebagaimana Maryam melahirkan Isa dan tidak pula diperanakkan. Ini adalah bantahan terhadap orang-orang Nasrani yang mengatakan Isa al-Masih adalah anak Allah dan bantahan terhadap orang-orang Yahudi yang mengatakan Uzair adalah anak Allah.",
+          "4": "Dalam ayat ini, Allah menjelaskan lagi bahwa tidak ada yang setara dan sebanding dengan Dia dalam zat, sifat, dan perbuatan-Nya. Ini adalah tantangan terhadap orang-orang yang beritikad bahwa ada yang setara dan menyerupai Allah dalam perbuatannya, sebagaimana pendirian orang-orang musyrik Arab yang menyatakan bahwa malaikat itu adalah sekutu Allah."
+        }
+      }
+    }
+  }
+}

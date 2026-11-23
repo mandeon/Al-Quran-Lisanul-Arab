@@ -1,0 +1,27 @@
+# Dependencies
+node_modules/
+
+# Production
+build/
+dist/
+
+# Coverage
+coverage/
+
+# Environment and system files
+.DS_Store
+*.log
+.env*
+!.env.example
+
+# Custom agent skills
+.agents/
+
+# External dictionaries and temporary scripts
+Arabic-Dictionaries/
+Arabic-Dictionaries-OSINTAI/
+scripts/.cache/
+scripts/.cache_full/
+scripts/lisan_extract/
+scripts/__pycache__/
+scripts/_*
