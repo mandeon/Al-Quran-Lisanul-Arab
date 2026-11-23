@@ -41,6 +41,11 @@ Object.entries(localSurahModules).forEach(([filePath, mod]) => {
 
 export const ALL_SURAHS: SurahMeta[] = rawSurahList as SurahMeta[];
 
+/** Akses sinkron ke data surat yang dibundel (dipakai analisis Masani). */
+export function getBundledSurah(surahNumber: number): SurahDetail | undefined {
+  return BUNDLED_SURAHS[surahNumber];
+}
+
 export const TOTAL_AYAT_IN_QURAN = ALL_SURAHS.reduce(
   (acc, s) => acc + s.number_of_ayah,
   0

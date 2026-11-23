@@ -1,5 +1,5 @@
 import stats from '../data/abjad-stats.json';
-import { ALL_SURAHS } from './quranApi';
+import { ALL_SURAHS, getBundledSurah } from './quranApi';
 import { AyahRef } from './abjadStats';
 
 export interface SurahStat {
@@ -701,83 +701,86 @@ export function getMasaniTreeForSurah(surahNumber: number): MasaniConceptTree {
 
   const meta = ALL_SURAHS[surahNumber - 1];
   const name = meta?.name ?? `Surat ${surahNumber}`;
-  const totalAyah = meta?.number_of_ayah ?? 10;
+
+  // Diawali AYAT 1 surat ini (teks & terjemahan asli), bukan template.
+  const report = getSurahMasaniReport(surahNumber);
+  const opening = report?.opening;
+  const firstWithin = report?.withinSurahGroups[0];
+  const firstAcross = report?.acrossSurahSummary[0];
+
+  const withinChildren = (report?.withinSurahGroups ?? []).slice(0, 3).map((g) => ({
+    label: `Nilai ${formatValue(g.value)}: Ayat ${g.ayat.join(' = ')}`,
+    surahRef: surahNumber,
+    ayahRef: g.ayat[0],
+    surahName: name,
+    note: `${g.ayat.length} ayat dalam QS. ${name} memiliki nilai hisab sama (${formatValue(g.value)}).`,
+  }));
+
+  const acrossChildren = (report?.acrossSurahSummary ?? []).slice(0, 3).map((s) => ({
+    label: `QS. ${s.surahName} (${s.links.length} kaitan)`,
+    surahRef: s.surah,
+    ayahRef: s.links[0].toAyah,
+    surahName: s.surahName,
+    note: s.links
+      .slice(0, 3)
+      .map((l) => `${name}:${l.fromAyah} = ${s.surahName}:${l.toAyah} (${formatValue(l.value)})`)
+      .join(' · '),
+  }));
 
   // Pasangan tematik default yang mewakili pesan tiap surat
   const dynamicTree: MasaniConceptTree = {
     id: `surah-${surahNumber}`,
     surahNumber,
     surahName: name,
-    title: `Pohon Konsep Masani: QS. ${name} (Surat ke-${surahNumber})`,
-    theme: `Keseimbangan Pesan Berpasangan dalam Surat ${name}`,
-    verseAnchor: `QS. ${name}: 1–${Math.min(3, totalAyah)}`,
+    title: `Pohon Masani QS. ${name}: Diawali Ayat 1`,
+    theme: `Masani Dalam Surat ↔ Antar Surat (QS. ${name})`,
+    verseAnchor: `QS. ${name}: 1`,
     anchorSurah: surahNumber,
     anchorAyah: 1,
-    anchorArabic: `بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ — ${meta?.name_translations.ar ?? ''}`,
-    anchorTranslation: `Dengan nama Allah Yang Maha Pengasih lagi Maha Penyayang. Renungan pesan berpasangan (Masani) dalam Surat ${name}.`,
-    anchorKeywords: ['Maha Pengasih', 'Maha Penyayang', name],
-    description: `Surat ${name} (${totalAyah} ayat) tersusun atas prinsip Matsani (penjelasan berpasangan). Di dalamnya terdapat perpaduan antara kabar gembira (Sisi A) dan peringatan kesungguhan (Sisi B).`,
+    anchorArabic: opening?.arabic || meta?.name_translations.ar || '',
+    anchorTranslation: opening?.translation || `Ayat pertama QS. ${name}.`,
+    anchorKeywords: [name],
+    description: `Pohon ini berangkat dari ayat 1 QS. ${name} (nilai hisab ${formatValue(
+      opening?.value ?? 0
+    )}). Cabang A memuat pasangan (masani) di dalam surat: ${
+      report?.counts.withinSurahPairs ?? 0
+    } pasangan ayat bernilai sama. Cabang B memuat pasangan antar surat: ${
+      report?.counts.acrossSurahPairs ?? 0
+    } kaitan ke ${report?.counts.linkedSurahs ?? 0} surat lain.`,
     tsunaiLayers: [],
     evenOddFormula: {
       quranVerse: 'وَٱلشَّفْعِ وَٱلْوَتْرِ — Demi yang genap dan yang ganjil (QS. Al-Fajr: 3)',
-      pairFormula: `Cabang Harapan + Cabang Peringatan = 2 Sisi Masani Surat ${name} (Genap)`,
-      totalFormula: `Pesan Tauhid + (Harapan + Peringatan) = 3 Pondasi Hikmah (Ganjil)`,
-      explanation: `Setiap surat Al-Qur'an memadukan harapan rahmat Allah dan kehati-hatian atas larangan-Nya, membentuk keseimbangan 2 pilar yang berpasangan.`,
+      pairFormula: `Masani Dalam Surat + Masani Antar Surat = 2 Cabang (Genap)`,
+      totalFormula: `Ayat 1 + (Dalam + Antar Surat) = 3 Simpul (Ganjil)`,
+      explanation: `Ayat 1 QS. ${name} menjadi akar; pasangannya dicari di dalam surat dan di seluruh mushaf berdasarkan nilai hisabul jumal yang identik.`,
     },
     branches: {
       sideA: {
-        name: `Kabar Gembira & Rahmat (At-Tarsyih)`,
-        arabic: 'الرَّحْمَةُ وَالْبُشْرَى',
+        name: `Masani Dalam Surat (${report?.counts.withinSurahPairs ?? 0} pasangan)`,
+        arabic: 'فِي السُّورَة',
         surahRef: surahNumber,
-        ayahRef: 1,
+        ayahRef: firstWithin?.ayat[0] ?? 1,
         surahName: name,
-        quote: `Segala bentuk rahmat, petunjuk, dan janji kebaikan bagi orang yang beriman dalam Surat ${name}...`,
-        highlightWords: ['rahmat', 'petunjuk', 'kebaikan', 'beriman'],
-        children: [
-          {
-            label: `Ketaatan dan Keimanan yang Diterima`,
-            surahRef: surahNumber,
-            ayahRef: Math.max(1, Math.floor(totalAyah / 3)),
-            surahName: name,
-            note: `Meneguhkan hati orang beriman agar senantiasa teguh dalam jalan Allah`,
-            highlightWords: ['beriman', 'ketaatan'],
-          },
-          {
-            label: `Pahala & Kesudahan yang Baik`,
-            surahRef: surahNumber,
-            ayahRef: totalAyah,
-            surahName: name,
-            note: `Janji kemenangan dan surga bagi hamba yang bertakwa`,
-            highlightWords: ['pahala', 'surga', 'bertakwa'],
-          },
-        ],
+        quote: firstWithin
+          ? `Grup terbesar: Ayat ${firstWithin.ayat.join(', ')} bernilai sama (${formatValue(firstWithin.value)}).`
+          : `Tidak ditemukan ayat bernilai hisab sama di dalam QS. ${name}.`,
+        children: withinChildren,
       },
       sideB: {
-        name: `Peringatan & Keadilan Hukum (Al-Indzar)`,
-        arabic: 'الْإِنْذَارُ وَالْعَدْل',
-        surahRef: surahNumber,
-        ayahRef: Math.min(totalAyah, Math.floor(totalAyah / 2) || 1),
-        surahName: name,
-        quote: `Peringatan bagi orang yang melampaui batas dan lalai dari mengingat hari pembalasan dalam Surat ${name}...`,
-        highlightWords: ['peringatan', 'keadilan', 'hari pembalasan'],
-        children: [
-          {
-            label: `Larangan Melampaui Batas`,
-            surahRef: surahNumber,
-            ayahRef: Math.min(totalAyah, Math.floor(totalAyah / 2) + 1),
-            surahName: name,
-            note: `Peringatan agar manusia tidak terpedaya oleh tipu daya dunia`,
-            highlightWords: ['peringatan', 'larangan'],
-          },
-          {
-            label: `Pertanggungjawaban Setiap Jiwa`,
-            surahRef: surahNumber,
-            ayahRef: Math.min(totalAyah, totalAyah - 1 || 1),
-            surahName: name,
-            note: `Setiap manusia akan menuai hasil dari apa yang telah dikerjakannya`,
-            highlightWords: ['pertanggungjawaban', 'amal'],
-          },
-        ],
+        name: `Masani Antar Surat (${report?.counts.linkedSurahs ?? 0} surat)`,
+        arabic: 'بَيْنَ السُّوَر',
+        surahRef: firstAcross?.surah ?? surahNumber,
+        ayahRef: firstAcross?.links[0].toAyah ?? 1,
+        surahName: firstAcross?.surahName ?? name,
+        quote: opening && opening.acrossSurahs.length > 0
+          ? `Ayat 1 QS. ${name} sama nilainya dengan: ${opening.acrossSurahs
+              .slice(0, 5)
+              .map((r) => `${r.surahName}:${r.ayah}`)
+              .join(', ')}${opening.acrossSurahs.length > 5 ? '…' : ''}.`
+          : firstAcross
+            ? `Ayat 1 belum punya pasangan lintas surat; kaitan terbanyak ke QS. ${firstAcross.surahName} (${firstAcross.links.length} kaitan).`
+            : `Tidak ditemukan pasangan lintas surat untuk QS. ${name}.`,
+        children: acrossChildren,
       },
     },
   };
@@ -785,4 +788,160 @@ export function getMasaniTreeForSurah(surahNumber: number): MasaniConceptTree {
   return ensureTsunaiLayers(dynamicTree);
 }
 
+function formatValue(v: number): string {
+  return v.toLocaleString('id-ID');
+}
+
 export const MASANI_CONCEPT_TREES: MasaniConceptTree[] = Object.values(CURATED_MASANI_TREES);
+
+/* =====================================================================
+ * MASANI BERBASIS DATA: DIAWALI AYAT 1 TIAP SURAT
+ * Mencari pasangan (masani) DALAM SURAT dan ANTAR SURAT
+ * berdasarkan kesamaan nilai hisabul jumal.
+ * ===================================================================== */
+
+export interface MasaniPairRef {
+  surah: number;
+  surahName: string;
+  ayah: number;
+  value: number;
+  arabic: string;
+  translation: string;
+}
+
+export interface MasaniAyahNode extends MasaniPairRef {
+  /** Pasangan di dalam surat yang sama (nilai hisab identik) */
+  withinSurah: MasaniPairRef[];
+  /** Pasangan di surat lain (nilai hisab identik) */
+  acrossSurahs: MasaniPairRef[];
+}
+
+export interface SurahMasaniReport {
+  surahNumber: number;
+  surahName: string;
+  totalAyah: number;
+  /** Ayat 1 sebagai titik awal (pembuka) tiap surat */
+  opening: MasaniAyahNode;
+  /** Semua grup ayat bernilai sama di dalam surat ini */
+  withinSurahGroups: { value: number; ayat: number[] }[];
+  /** Ringkasan jumlah kaitan antar surat dari seluruh ayat surat ini */
+  acrossSurahSummary: {
+    surah: number;
+    surahName: string;
+    links: { fromAyah: number; toAyah: number; value: number }[];
+  }[];
+  counts: {
+    withinSurahPairs: number;
+    acrossSurahPairs: number;
+    linkedSurahs: number;
+  };
+}
+
+function buildPairRef(surah: number, ayah: number): MasaniPairRef {
+  const stat = SURAH_STATS[surah - 1];
+  const detail = getBundledSurah(surah);
+  const verse = detail?.verses?.[ayah - 1];
+  return {
+    surah,
+    surahName: ALL_SURAHS[surah - 1]?.name ?? `Surat ${surah}`,
+    ayah,
+    value: stat?.ayat[ayah - 1] ?? 0,
+    arabic: verse?.text_with_harakat || verse?.text || '',
+    translation: verse?.translation_id || '',
+  };
+}
+
+const reportCache = new Map<number, SurahMasaniReport>();
+
+/**
+ * Laporan Masani satu surat, DIAWALI dari ayat ke-1 surat tersebut.
+ * Pasangan dicari dua arah: di dalam surat (internal) dan antar surat (lintas mushaf).
+ */
+export function getSurahMasaniReport(surahNumber: number): SurahMasaniReport | null {
+  const cached = reportCache.get(surahNumber);
+  if (cached) return cached;
+
+  const stat = SURAH_STATS[surahNumber - 1];
+  if (!stat) return null;
+
+  const meta = ALL_SURAHS[surahNumber - 1];
+  const totalAyah = stat.ayat.length;
+
+  // --- Titik awal: AYAT 1 ---
+  const openingBase = buildPairRef(surahNumber, 1);
+  const openingRefs = VALUE_INDEX.get(openingBase.value) ?? [];
+  const opening: MasaniAyahNode = {
+    ...openingBase,
+    withinSurah: openingRefs
+      .filter((r) => r.surah === surahNumber && r.ayah !== 1)
+      .map((r) => buildPairRef(r.surah, r.ayah)),
+    acrossSurahs: openingRefs
+      .filter((r) => r.surah !== surahNumber)
+      .map((r) => buildPairRef(r.surah, r.ayah)),
+  };
+
+  // --- Masani DALAM SURAT: grup ayat bernilai sama ---
+  const valueToAyat = new Map<number, number[]>();
+  stat.ayat.forEach((v, i) => {
+    const arr = valueToAyat.get(v) ?? [];
+    arr.push(i + 1);
+    valueToAyat.set(v, arr);
+  });
+  const withinSurahGroups = Array.from(valueToAyat.entries())
+    .filter(([, ayat]) => ayat.length > 1)
+    .map(([value, ayat]) => ({ value, ayat }))
+    .sort((a, b) => b.ayat.length - a.ayat.length || a.ayat[0] - b.ayat[0]);
+
+  const withinSurahPairs = withinSurahGroups.reduce(
+    (acc, g) => acc + (g.ayat.length * (g.ayat.length - 1)) / 2,
+    0
+  );
+
+  // --- Masani ANTAR SURAT: kaitan tiap ayat ke ayat di surat lain ---
+  const bySurah = new Map<number, { fromAyah: number; toAyah: number; value: number }[]>();
+  let acrossSurahPairs = 0;
+  stat.ayat.forEach((v, i) => {
+    (VALUE_INDEX.get(v) ?? []).forEach((r) => {
+      if (r.surah === surahNumber) return;
+      acrossSurahPairs++;
+      const arr = bySurah.get(r.surah) ?? [];
+      arr.push({ fromAyah: i + 1, toAyah: r.ayah, value: v });
+      bySurah.set(r.surah, arr);
+    });
+  });
+
+  const acrossSurahSummary = Array.from(bySurah.entries())
+    .map(([surah, links]) => ({
+      surah,
+      surahName: ALL_SURAHS[surah - 1]?.name ?? `Surat ${surah}`,
+      links: links.sort((a, b) => a.fromAyah - b.fromAyah),
+    }))
+    .sort((a, b) => b.links.length - a.links.length || a.surah - b.surah);
+
+  const report: SurahMasaniReport = {
+    surahNumber,
+    surahName: meta?.name ?? `Surat ${surahNumber}`,
+    totalAyah,
+    opening,
+    withinSurahGroups,
+    acrossSurahSummary,
+    counts: {
+      withinSurahPairs,
+      acrossSurahPairs,
+      linkedSurahs: acrossSurahSummary.length,
+    },
+  };
+
+  reportCache.set(surahNumber, report);
+  return report;
+}
+
+/** Laporan Masani untuk SELURUH 114 surat (diawali ayat 1 masing-masing surat). */
+export function getAllSurahMasaniReports(): SurahMasaniReport[] {
+  const out: SurahMasaniReport[] = [];
+  for (let n = 1; n <= 114; n++) {
+    const r = getSurahMasaniReport(n);
+    if (r) out.push(r);
+  }
+  return out;
+}

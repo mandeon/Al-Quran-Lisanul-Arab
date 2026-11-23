@@ -21,9 +21,11 @@ import {
   getExact2xPairs,
   getArithmeticTriplets,
   getWholeQuranEvenOddStats,
+  getSurahMasaniReport,
 } from '../utils/masaniAnalysis';
 import { formatNumber } from '../utils/abjad';
 import { renderHighlightedTranslation } from '../utils/highlightKeywords';
+import { MasaniReportCard } from './MasaniReportCard';
 
 interface MasaniPanelProps {
   allSurahs: SurahMeta[];
@@ -44,6 +46,9 @@ export const MasaniPanel: React.FC<MasaniPanelProps> = ({
   const activeTree = useMemo(() => {
     return getMasaniTreeForSurah(selectedTreeSurah);
   }, [selectedTreeSurah]);
+
+  // Laporan Masani berbasis data, diawali ayat 1 surat terpilih
+  const masaniReport = useMemo(() => getSurahMasaniReport(selectedTreeSurah), [selectedTreeSurah]);
 
   // Filtered surahs for selector search
   const filteredSurahsForSelect = useMemo(() => {
@@ -396,6 +401,9 @@ export const MasaniPanel: React.FC<MasaniPanelProps> = ({
               </div>
             </div>
           </div>
+
+          {/* LAPORAN MASANI BERBASIS DATA: DIAWALI AYAT 1, DALAM SURAT & ANTAR SURAT */}
+          {masaniReport && <MasaniReportCard report={masaniReport} onOpenSurah={onOpenSurah} />}
         </div>
       )}
 
